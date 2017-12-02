@@ -3,11 +3,15 @@
 
 body {
   margin: 0;
+  
 }
 .Section {
   box-sizing: border-box;
-  display: inline-block;
-  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-basis: 0;
 }
 
 .Section--full {
@@ -37,19 +41,4 @@ body {
 
 .Section--red-text .Section__text {
   color: black;
-}
-.List {
-  list-style-type: none;
-}
-
-.List--horizontal .List__item {
-  display: inline-block;
-}
-
-.List--red-first-item :first-child {
-  color: red;
-}
-
-.List__item {
-  padding-bottom: 5px;
 }
