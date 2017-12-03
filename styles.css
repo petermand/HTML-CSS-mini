@@ -1,44 +1,66 @@
-@import './components/Section.css';
-@import './components/List.css';
 
 body {
-  margin: 0;
-  
+  margin: 0; 
 }
-.Section {
+.section {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-basis: 0;
 }
 
-.Section--full {
+.section__newTab {
+  position: absolute;
+  display:inline-block;
+  right: 0;
+  padding: 10px;
+  margin-top: -10px;
+  background-color: grey
+  z-index: -1 ;
+}
+
+.section__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid black;
   width: 100%;
-  text-align: center;
-  margin: 0;
+  justify-content: center;
 }
 
-.Section--half {
+.section--split .section__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  justify-content: space-between;
+}
+
+.section__heading {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 50%;
+  margin-bottom: 0;
 }
 
-.Section--new {
-    position: absolute;
-    display: inline-block;
-    right: 50%;
-    padding: 10px;
-    margin-top: -10px;
-    background-color: gray;
-    z-index: -1;
-
+h2 {
+  padding-left: 15px;
 }
 
-.Section p {
-  color: black;
+ p {
+   padding-left: 15px;
+   padding-right: 15px;
+   text-align: justify;
 }
 
-.Section--red-text .Section__text {
-  color: black;
+@media (min-width: 600px) {
+  .section--split .section__content {
+    box-sizing: border-box;
+    width: 50%
+  }
 }
+
